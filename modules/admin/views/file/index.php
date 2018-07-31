@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use mihaildev\elfinder\ElFinder;
 use mihaildev\elfinder\InputFile;
 
 /* @var $this yii\web\View */
