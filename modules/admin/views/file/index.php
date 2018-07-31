@@ -40,7 +40,7 @@ use mihaildev\elfinder\InputFile;
     ?>
     <?php
     if (isset($fileContent)){
-        echo "<div class='text-success'>" . $fileContent . "</div>";
+        echo "<p class='text-success'>" . $fileContent . "</p>";
     }
     ?>
 
