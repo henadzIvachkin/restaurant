@@ -48,6 +48,8 @@ CustomAsset::register($this);
                     <li><a href="<?= \yii\helpers\Url::toRoute('/admin/food/index'); ?>">Menus</a></li>
                     <li><a href="<?= \yii\helpers\Url::toRoute('/admin/post/index'); ?>">Blog</a></li>
                     <li><a href="<?= \yii\helpers\Url::toRoute('/user/admin'); ?>">Users</a></li>
+                    <li><a href="<?= \yii\helpers\Url::toRoute('/admin/reservation/index'); ?>">Reservations</a></li>
+                    <li><a href="<?= \yii\helpers\Url::toRoute('/admin/subscribe/index'); ?>">Subscribes</a></li>
                 </ul>
             </div>
             <!--/.navbar-collapse-->

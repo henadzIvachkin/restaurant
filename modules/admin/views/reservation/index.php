@@ -25,13 +25,25 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'day',
-            'hour',
+            [
+                'attribute' => 'hour',
+                'label' => 'Hour',
+                'format' => 'raw',
+                'value' => function($data){
+                    return $data->hour . ":00";
+                }
+            ],
             'full_name',
             'phone',
-            //'persons',
+            'persons',
+            [
+                'attribute' => 'status',
+                'format' => 'html',
+                'value' => function($data){
+                    return ($data->status == 0)? "<span class='text-danger'>New</span>" : "<span class='text-success'>Approved</span>";
+                }
+            ],
             //'created_at',
             //'updated_at',
 

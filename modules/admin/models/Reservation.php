@@ -13,6 +13,7 @@ use Yii;
  * @property string $full_name
  * @property string $phone
  * @property int $persons
+ * @property tyniint $status
  * @property string $created_at
  * @property string $updated_at
  */
@@ -26,6 +27,7 @@ class Reservation extends \yii\db\ActiveRecord
         return 'reservation';
     }
 
+
     /**
      * {@inheritdoc}
      */
@@ -33,7 +35,9 @@ class Reservation extends \yii\db\ActiveRecord
     {
         return [
             [['day', 'hour', 'full_name', 'phone', 'persons'], 'required'],
-            [['day', 'hour', 'persons'], 'integer'],
+            [['hour', 'persons'], 'integer'],
+            [['day'], 'string'],
+            [['status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['full_name', 'phone'], 'string', 'max' => 255],
         ];
@@ -51,6 +55,7 @@ class Reservation extends \yii\db\ActiveRecord
             'full_name' => 'Full Name',
             'phone' => 'Phone',
             'persons' => 'Persons',
+            'status' => 'Status',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

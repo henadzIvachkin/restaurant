@@ -1,6 +1,7 @@
 
 <?php
 use yii\helpers\Html;
+use kartik\date\DatePicker;
 ?>
 
 <section id="book-table">
@@ -24,15 +25,19 @@ use yii\helpers\Html;
                         <div class="row">
                             <div class="col-md-6">
                                 <fieldset>
-                                    <?= Html::dropDownList('day','',[''=>'Select day',
-                                                                    '1'=>'Monday',
-                                                                    '2'=>'Tuesday',
-                                                                    '3'=>'Wednesday',
-                                                                    '4'=>'Thursday',
-                                                                    '5'=>'Friday',
-                                                                    '6'=>'Saturday',
-                                                                    '7'=>'Sunday',],['required'=>''])?>
-
+                                    <?php
+                                    echo DatePicker::widget([
+                                        'name' => 'day',
+                                        'type' => DatePicker::TYPE_INPUT,
+                                        'options' => ['placeholder' => 'Reservation date ...','required'=>'', 'class'=>'date-picker'],
+                                        'pluginOptions' => [
+                                            'todayHighlight' => true,
+                                            'todayBtn' => true,
+                                            'format' => 'yyyy-mm-dd',
+                                            'autoclose' => true,
+                                        ]
+                                    ]);
+                                    ?>
                                 </fieldset>
                             </div>
                             <div class="col-md-6">

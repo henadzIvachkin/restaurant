@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Reservation */
 
-$this->title = $model->id;
+$this->title = $model->full_name." | ".$model->day;
 $this->params['breadcrumbs'][] = ['label' => 'Reservations', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -34,6 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'full_name',
             'phone',
             'persons',
+            [
+                'attribute' => 'status',
+                'format' => 'html',
+                'value' => function($data){
+                    return ($data->status == 0)? "<span class='text-danger'>New</span>" : "<span class='text-success'>Approved</span>";
+                }
+            ],
+
             'created_at',
             'updated_at',
         ],

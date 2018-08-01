@@ -366,6 +366,12 @@ section#book-table .left-image img {
 	color: #9a9a9a;
 }
 
+
+.right-info input.date-picker {
+	margin-top: 6px;
+	margin-bottom: 0;
+}
+
 .right-info button {
 	width: 100%;
 	display: inline-block;

@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\date\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Reservation */
@@ -12,7 +13,17 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'day')->textInput() ?>
+    <?= $form->field($model, 'day')->widget(DatePicker::className(),[
+        'name' => 'day',
+        'options' => ['placeholder' => 'Enter reservation date ...'],
+        'pluginOptions' => [
+            'todayHighlight' => true,
+            'todayBtn' => true,
+            'format' => 'yyyy-mm-dd',
+            'autoclose' => true,
+        ]
+    ]) ?>
+
 
     <?= $form->field($model, 'hour')->textInput() ?>
 
@@ -22,9 +33,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'persons')->textInput() ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <?= $form->field($model, 'status')->dropDownList(['0'=>'New','1'=>'Approved']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -22,7 +22,8 @@
         "dektrium/yii2-user": "^0.9.14",
         "mihaildev/yii2-ckeditor": "*",
         "mihaildev/yii2-elfinder": "*",
-        "noam148/yii2-image-resize" : "*"
+        "noam148/yii2-image-resize" : "*",
+        "kartik-v/yii2-widget-datepicker": "@dev"
 		
     },
     "require-dev": {

@@ -124,7 +124,7 @@
             <div class="col-md-4">
                 <div class="food-item">
                     <h2>Breakfast</h2>
-                    <?= Html::img('@web/img/'.$breakfast->image, ['alt' => 'breakfast image']) ?>
+                    <img src="<?= \Yii::$app->imageresize->getUrl(\Yii::getAlias('@webroot') . $breakfast->image, 300, 174)?>" alt="<?= $breakfast->name?>">
                     <div class="price">$<?= $breakfast->price/100 ?></div>
                     <div class="text-content">
                         <h4><?= $breakfast->name ?></h4>
@@ -136,7 +136,7 @@
             <div class="col-md-4">
                 <div class="food-item">
                     <h2>Lunch</h2>
-                    <?= Html::img('@web/img/'.$lunch->image, ['alt' => 'breakfast image']) ?>
+                    <img src="<?= \Yii::$app->imageresize->getUrl(\Yii::getAlias('@webroot') . $lunch->image, 300, 174)?>" alt="<?= $lunch->name?>">
                     <div class="price">$<?= $lunch->price/100 ?></div>
                     <div class="text-content">
                         <h4><?= $lunch->name ?></h4>
@@ -148,7 +148,7 @@
             <div class="col-md-4">
                 <div class="food-item">
                     <h2>Dinner</h2>
-                    <?= Html::img('@web/img/'.$dinner->image, ['alt' => 'breakfast image']) ?>
+                    <img src="<?= \Yii::$app->imageresize->getUrl(\Yii::getAlias('@webroot') . $dinner->image, 300, 174)?>" alt="<?= $dinner->name?>">
                     <div class="price">$<?= $dinner->price/100 ?></div>
                     <div class="text-content">
                         <h4><?= $dinner->name ?></h4>

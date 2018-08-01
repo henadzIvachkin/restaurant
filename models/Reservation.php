@@ -33,7 +33,8 @@ class Reservation extends \yii\db\ActiveRecord
     {
         return [
             [['day', 'hour', 'full_name', 'phone', 'persons'], 'required'],
-            [['day', 'hour', 'persons'], 'integer'],
+            [['hour', 'persons'], 'integer'],
+            [['day'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['full_name', 'phone'], 'string', 'max' => 255],
         ];
