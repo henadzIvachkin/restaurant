@@ -35,6 +35,7 @@ use kartik\date\DatePicker;
                                             'todayBtn' => true,
                                             'format' => 'yyyy-mm-dd',
                                             'autoclose' => true,
+                                            'weekStart' => 1,
                                         ]
                                     ]);
                                     ?>
